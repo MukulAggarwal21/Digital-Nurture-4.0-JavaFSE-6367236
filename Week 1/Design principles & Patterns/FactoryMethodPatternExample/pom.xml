@@ -1,0 +1,54 @@
+```xml
+
+
+    4.0.0
+
+    com.designpatterns
+    factory-method-pattern-example
+    1.0.0
+    jar
+
+    Factory Method Pattern Example
+    Implementation of Factory Method Pattern for Document Management System
+
+    
+        8
+        8
+        UTF-8
+    
+
+    
+        
+        
+            junit
+            junit
+            4.13.2
+            test
+        
+    
+
+    
+        
+            
+                org.apache.maven.plugins
+                maven-compiler-plugin
+                3.8.1
+                
+                    8
+                    8
+                
+            
+            
+            
+            
+                org.codehaus.mojo
+                exec-maven-plugin
+                3.1.0
+                
+                    com.documentmanagement.Main
+                
+            
+        
+    
+
+```
