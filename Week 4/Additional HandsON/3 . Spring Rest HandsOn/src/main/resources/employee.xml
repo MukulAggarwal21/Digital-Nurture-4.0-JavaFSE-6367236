@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee1" class="com.example.rest.model.Employee">
+        <property name="id" value="1"/>
+        <property name="name" value="John Doe"/>
+        <property name="department" value="HR"/>
+        <property name="skills">
+            <list>
+                <value>Communication</value>
+                <value>Teamwork</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="employee2" class="com.example.rest.model.Employee">
+        <property name="id" value="2"/>
+        <property name="name" value="Jane Smith"/>
+        <property name="department" value="Finance"/>
+        <property name="skills">
+            <list>
+                <value>Excel</value>
+                <value>Accounting</value>
+            </list>
+        </property>
+    </bean>
+
+    <util:list id="employees" value-type="com.example.rest.model.Employee"
+               xmlns:util="http://www.springframework.org/schema/util">
+        <ref bean="employee1"/>
+        <ref bean="employee2"/>
+    </util:list>
+
+    <bean class="com.example.rest.dao.EmployeeDao">
+        <property name="employees" ref="employees"/>
+    </bean>
+</beans>
